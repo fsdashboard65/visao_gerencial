@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
+  <title>FS | Painel de Ativos Industriais</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div class="top-stripe"></div>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <img class="brand-image" alt="FS - Fueling Sustainability" width="157" height="80"
+          src="data:image/png;base64,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" />
+        <div class="brand-caption">INTELIGÊNCIA INDUSTRIAL<strong>Painel de ativos</strong></div>
+      </div>
+      <nav aria-label="Navegação principal">
+        <p class="side-title">VISÃO GERENCIAL</p>
+        <div class="menu">
+          <button class="nav active" data-page="resumo" type="button"><svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="7" height="7" rx="1" />
+              <rect x="14" y="3" width="7" height="7" rx="1" />
+              <rect x="3" y="14" width="7" height="7" rx="1" />
+              <rect x="14" y="14" width="7" height="7" rx="1" />
+            </svg>Resumo executivo</button>
+          <button class="nav" data-page="analise" type="button"><svg viewBox="0 0 24 24">
+              <path d="M3 20V10m6 10V4m6 16v-8m6 8V7" />
+            </svg>Análise de TAGs</button>
+          <button class="nav" data-page="inventario" type="button"><svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18M9 9v12M3 15h18" />
+            </svg>Inventário completo</button>
+        </div>
+      </nav>
+      <div class="side-actions">
+        <p class="side-title">DADOS E CONSULTA</p>
+        <button class="side-button" id="exportCSV" type="button"><svg viewBox="0 0 24 24">
+            <path d="M12 3v14m-5-5 5 5 5-5M4 19v2h16v-2" />
+          </svg>Exportar dados filtrados</button>
+        <button class="side-button" id="clearFilters" type="button"><svg viewBox="0 0 24 24">
+            <path d="M3 12a9 9 0 1 0 3-7M3 4v5h5" />
+          </svg>Limpar filtros</button>
+      </div>
+      <div class="side-bottom">
+        <div class="local-tag">JSON EXTERNO · LEITURA AUTOMÁTICA</div>O painel lê <b>dados.json</b> nesta mesma pasta e
+        verifica alterações a cada 15 segundos. Ao substituir o JSON no servidor, os indicadores são atualizados sem
+        importar arquivos.<br /><br />FS · Gestão industrial
+      </div>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div class="breadcrumb">FS &nbsp;/&nbsp; OPERAÇÕES &nbsp;/&nbsp; <strong>GESTÃO DE ATIVOS</strong></div>
+        <div class="top-right"><span class="state-pill" id="loadState">● CARREGANDO JSON</span><span class="file-pill"
+            id="sourceName">dados.json</span></div>
+      </div>
+      <header class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">FS &nbsp;•&nbsp; EXCELÊNCIA OPERACIONAL</p>
+          <h1 id="pageTitle">Painel de ativos industriais</h1>
+          <p id="pageSubtitle">Visão gerencial de válvulas e motores, com filtro por setor, indicadores e consulta
+            detalhada. Dados originais preservados.</p>
+        </div><span aria-hidden="true" class="hero-mark">FS</span>
+      </header>
+      <div id="loadWarning" class="load-warning" hidden role="alert"></div>
+      <section class="toolbar" aria-label="Filtros de consulta">
+        <div class="search-wrap"><svg viewBox="0 0 24 24">
+            <circle cx="10.8" cy="10.8" r="7.5" />
+            <path d="m16.5 16.5 5 5" />
+          </svg><input class="input" id="search" type="search" autocomplete="off"
+            placeholder="Pesquisar TAG, descrição ou equipamento..." aria-label="Pesquisar TAG e descrição" /></div>
+        <select class="select" id="groupFilter" aria-label="Grupo de equipamento">
+          <option value="">Todos os grupos</option>
+        </select>
+        <select class="select" id="sectorFilter" aria-label="Filtrar por setor">
+          <option value="">Todos os setores</option>
+        </select>
+        <select class="select" id="prefixFilter" aria-label="Prefixo do TAG">
+          <option value="">Todos os prefixos</option>
+        </select>
+        <select class="select" id="letterFilter" aria-label="Função da segunda letra">
+          <option value="">Todas as funções</option>
+        </select>
+        <select class="select" id="statusFilter" aria-label="Sufixo do TAG">
+          <option value="">Todos os sufixos</option>
+          <option value="OP">OP</option>
+          <option value="CL">CL</option>
+          <option value="Sem sufixo">Sem sufixo</option>
+        </select>
+        <span id="resultCount" class="results-pill">Carregando dados...</span>
+      </section>
+      <section id="resumo" class="page">
+        <div class="kpis">
+          <div class="kpi featured"><span class="kpi-label">Total de registros</span><span class="kpi-icon"><svg
+                viewBox="0 0 24 24">
+                <path d="M4 4h16v16H4zM4 10h16M10 10v10" />
+              </svg></span>
+            <div class="num" id="kpiTotal">—</div>
+            <div class="note">Linhas da base selecionada</div>
+          </div>
+          <div class="kpi featured clickable" role="button" tabindex="0" data-kpi-group="Válvulas"
+            title="Filtrar por válvulas"><span class="kpi-label">Válvulas</span><span class="kpi-icon"><svg
+                viewBox="0 0 24 24">
+                <path d="M3 5l9 7-9 7V5zm18 0-9 7 9 7V5zM12 2v20" />
+              </svg></span>
+            <div class="num" id="kpiValves">—</div>
+            <div class="note" id="valvesNote">Classificação gerencial</div>
+          </div>
+          <div class="kpi gold clickable" role="button" tabindex="0" data-kpi-group="Motores"
+            title="Filtrar por motores"><span class="kpi-label">Motores</span><span class="kpi-icon"><svg
+                viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="8" />
+                <path d="M7.5 15.5v-7l4.5 5 4.5-5v7" />
+              </svg></span>
+            <div class="num" id="kpiMotors">—</div>
+            <div class="note" id="motorsNote">Demais descrições originais</div>
+          </div>
+          <div class="kpi"><span class="kpi-label">TAGs únicos</span><span class="kpi-icon"><svg viewBox="0 0 24 24">
+                <path d="M4 12V4h8l8 8-8 8-8-8z" />
+                <circle cx="9" cy="9" r="1" />
+              </svg></span>
+            <div class="num" id="kpiTags">—</div>
+            <div class="note">Contagem sem repetir TAG</div>
+          </div>
+        </div>
+        <div class="two">
+          <article class="card">
+            <div class="card-top">
+              <div>
+                <p class="eyebrow">COMPOSIÇÃO DA BASE</p>
+                <h2>Válvulas × Motores</h2>
+              </div><span class="sidehint">Clique para filtrar</span>
+            </div>
+            <div class="donut-layout">
+              <div class="donut" id="groupDonut">
+                <div class="donut-center"><b id="donutTotal">—</b><small>REGISTROS</small></div>
+              </div>
+              <div id="groupLegend" class="legend"></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <div>
+                <p class="eyebrow">DISTRIBUIÇÃO POR CÓDIGO</p>
+                <h2>Prefixos mais frequentes</h2>
+              </div><span class="sidehint">Top 8</span>
+            </div>
+            <div class="bars" id="prefixBars"></div>
+          </article>
+        </div>
+        <div class="two equal section-gap">
+          <article class="card">
+            <div class="card-top">
+              <div>
+                <p class="eyebrow">IDENTIFICAÇÃO DO TAG</p>
+                <h2>Sufixos OP / CL</h2>
+              </div><span class="sidehint">Não indica status em tempo real</span>
+            </div>
+            <div class="status-track" id="statusTrack"></div>
+            <div id="statusLegend" class="status-legend"></div>
+            <div class="sector-summary-header">
+              <p class="eyebrow">LOCALIZAÇÃO INDUSTRIAL</p>
+              <h3>Principais setores</h3>
+              <p>Distribuição dos registros com localização identificada.</p>
+            </div>
+            <div class="bars sector-bars" id="sectorBars"></div>
+            <p class="sector-summary-note" id="sectorCoverageNote"></p>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <div>
+                <p class="eyebrow">LEGENDA DOS TAGS</p>
+                <h2>O que significam os prefixos?</h2>
+              </div><span class="sidehint">Referência para consulta</span>
+            </div>
+            <p class="prefix-intro">O prefixo é a sequência de letras no começo de um TAG. O número ao lado da barra
+              representa <strong>quantas linhas</strong> possuem esse prefixo, não necessariamente equipamentos únicos.
+              Clique na barra para filtrar.</p>
+            <div class="prefix-guide" id="prefixGuide"></div>
+            <p class="prefix-caution">As siglas de instrumentação seguem convenções usuais; prefixos como
+              <strong>FA</strong>, <strong>SV</strong>, <strong>PC</strong> e <strong>ME</strong> devem ser confirmados
+              na legenda de engenharia. As interpretações assinaladas são baseadas nas descrições desta planilha.</p>
+          </article>
+        </div>
+      </section>
+      <section id="analise" class="page hidden">
+        <div class="kpis">
+          <div class="kpi featured"><span class="kpi-label">Prefixos distintos</span><span class="kpi-icon"><svg
+                viewBox="0 0 24 24">
+                <rect x="4" y="4" width="16" height="16" rx="3" />
+                <path d="M8 9h8M8 13h8" />
+              </svg></span>
+            <div class="num" id="kpiPrefixes">—</div>
+            <div class="note">Prefixos identificados na seleção</div>
+          </div>
+          <div class="kpi"><span class="kpi-label">2ª letra: V</span><span class="kpi-icon"><svg viewBox="0 0 24 24">
+                <path d="m4 5 8 14 8-14" />
+              </svg></span>
+            <div class="num" id="kpiLetterV">—</div>
+            <div class="note">Indicação funcional de válvula</div>
+          </div>
+          <div class="kpi"><span class="kpi-label">2ª letra: I</span><span class="kpi-icon"><svg viewBox="0 0 24 24">
+                <path d="M12 5v14M7 5h10M7 19h10" />
+              </svg></span>
+            <div class="num" id="kpiLetterI">—</div>
+            <div class="note">Indicação funcional de indicador</div>
+          </div>
+          <div class="kpi gold"><span class="kpi-label">Repetições adicionais</span><span class="kpi-icon"><svg
+                viewBox="0 0 24 24">
+                <rect x="6" y="6" width="14" height="14" rx="2" />
+                <path d="M4 16V4h12" />
+              </svg></span>
+            <div class="num" id="kpiDuplicates">—</div>
+            <div class="note">Linhas além dos TAGs únicos</div>
+          </div>
+        </div>
+        <div class="two">
+          <article class="card">
+            <div class="card-top">
+              <div>
+                <p class="eyebrow">FUNÇÃO PELO TAG</p>
+                <h2>Distribuição pela 2ª letra</h2>
+              </div><span class="sidehint">Leitura do código</span>
+            </div>
+            <div class="bars" id="letterBars"></div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <div>
+                <p class="eyebrow">LOCALIZAÇÃO POR PREFIXO</p>
+                <h2>Principais famílias de TAGs</h2>
+              </div><span class="sidehint">Top 12</span>
+            </div>
+            <div class="bars" id="prefixLongBars"></div>
+          </article>
+        </div>
+        <div class="two equal section-gap">
+          <article class="card">
+            <div class="card-top">
+              <div>
+                <p class="eyebrow">INTEGRIDADE DA BASE</p>
+                <h2>Qualidade e rastreabilidade</h2>
+              </div>
+            </div>
+            <div id="qualityStats"></div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <div>
+                <p class="eyebrow">CLASSIFICAÇÕES ORIGINAIS</p>
+                <h2>Descrições mais frequentes</h2>
+              </div><span class="sidehint">Top 7</span>
+            </div>
+            <div class="bars" id="descriptionBars"></div>
+          </article>
+        </div>
+        <div class="card section-gap">
+          <p class="insight-title">REFERÊNCIA RÁPIDA · SEGUNDA LETRA DO TAG</p>
+          <div class="hintbox">A segunda letra indica uma função do código quando houver uma convenção conhecida. Isso
+            <strong>não substitui</strong> a descrição original do equipamento.</div>
+          <div class="function-chips"><span><b>V</b> Válvula</span><span><b>I</b> Indicador</span><span><b>T</b>
+              Transmissor</span><span><b>R</b> Registrador</span><span><b>Outras</b> Não classificadas</span></div>
+        </div>
+      </section>
+      <section id="inventario" class="page hidden">
+        <div class="card">
+          <div class="card-top">
+            <div>
+              <p class="eyebrow">BASE ORIGINAL + IDENTIFICAÇÃO DE SETOR</p>
+              <h2>Inventário completo de TAGs</h2>
+            </div><span class="sidehint">Sem excluir linhas repetidas</span>
+          </div>
+          <div class="table-outer">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>TAG original</th>
+                  <th>Descrição original</th>
+                  <th>Setor</th>
+                  <th>Grupo gerencial</th>
+                </tr>
+              </thead>
+              <tbody id="dataTableBody"></tbody>
+            </table>
+          </div>
+          <div class="paginator"><span id="rowsRange" class="pagination-info">—</span>
+            <div class="paging"><button class="page-btn" id="prevPage" type="button"
+                aria-label="Página anterior">‹</button><span id="pageNo">1 / 1</span><button class="page-btn"
+                id="nextPage" type="button" aria-label="Próxima página">›</button></div>
+          </div>
+        </div>
+      </section>
+      <footer>FS · Gestão de ativos industriais | Dados originais preservados. Setores obtidos das linhas de origem ou
+        de correspondências exatas de TAG e descrição. TAGs sem setor permanecem identificados. OP/CL são sufixos do
+        TAG, não telemetria ao vivo.</footer>
+    </main>
+  </div>
+  <div class="hidden" id="toast" role="status" aria-live="polite"></div>
+
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
